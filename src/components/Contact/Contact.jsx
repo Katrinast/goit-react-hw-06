@@ -3,7 +3,7 @@ import { FaPhone } from "react-icons/fa6";
 
 import css from './Contact.module.css'
 
-export default function Contact({ data: { id, name, number }, onDelete }) {
+export default function Contact({ data: { name, number }, onDelete }) {
   return (
     <div className={css.boxItem}>
         <div>
@@ -11,7 +11,7 @@ export default function Contact({ data: { id, name, number }, onDelete }) {
       
         <p><FaPhone /> {number}</p>
         </div>
-      <button onClick={() => onDelete(id)} className={css.deleteBtn}>Delete</button>
+      <button onClick={onDelete} className={css.deleteBtn}>Delete</button>
     </div>
   )
 }
